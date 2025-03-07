@@ -29,15 +29,15 @@ def check_passowrd_stregnth(password):
     if len(password) >= 8:
         score += 1 #increased score by 1
     else:
-        feedback.append("Password should be **atleast 8 character long**⚠️.")     
+        feedback.append("❌Password should be **atleast 8 character long**⚠️.")     
     if re.search(r"[A-Z]", password) and re.search(r"[a-z]", password):
         score += 1
     else:
-        feedback.append("password should be included both upper and lowercase letters.")    
+        feedback.append("❌password should be included both upper and lowercase letters.")    
     if re.search(r"\d" , password):
         score +=1
     else:
-        feedback.append("password shoulde be include ** atleast one number (0-9).")        
+        feedback.append("❌password shoulde be include ** atleast one number (0-9).")        
     #special characters
     if re.search(r"[!@#$%&*]", password):
         score += 1
@@ -50,7 +50,7 @@ def check_passowrd_stregnth(password):
     elif score == 3:
         st.info("**Moderate password - consider improving security by adding more features")    
     else:
-        st.error("**week passowrd** - Follow the instruction below to stragnthen it.")    
+        st.error("❌**week passowrd** - Follow the instruction below to stragnthen it.")    
 
     if feedback:
         with st.expander(" **Improve your password** "):
