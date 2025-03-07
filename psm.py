@@ -11,13 +11,13 @@ st.markdown("""
 <style>
     .main{text-align: center;}
     .stTextInput {width: 60% |important; margin:auto;} 
-    .stButton button {width:50%; background-color #4CAF50; color:white; font-size:18px;}                       
-    .stButton button:hover { background-color: #45a049;}         
+    .stButton button {width:50%; background-color : blue; color:white; font-size:18px;}                       
+    .stButton button:hover { background-color: red; color: white;}         
 </styles>
 """, unsafe_allow_html=True)
 
 # page title and description
-st.title("🔑Password Stregnth generator")
+st.title("🔑Password Stregnth Meter")
 st.write("⚠️Enter your password to check its security level.✅")
 
 # function to check password stregnth
